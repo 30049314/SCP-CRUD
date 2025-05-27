@@ -143,7 +143,7 @@ function UpdateSCP() {
             if (error) {
                 setError(error.message); // Set error if any
             } else {
-                window.location.href = "/home"; // Redirect to home after delete
+                navigate("/"); // Redirect to home after delete
                 window.location.reload(); // Reload the page after successful submission
             }
         }
@@ -165,7 +165,7 @@ function UpdateSCP() {
                 {!form ? (
                     // Skeleton or placeholder while loading
                     <div style={{ minHeight: 300, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <span>Loading...</span>
+                        <span>Loading... </span>
                     </div>
                 ) : (
                     <form className="form" onSubmit={handleSubmit}>
